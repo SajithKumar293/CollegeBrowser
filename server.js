@@ -25,7 +25,7 @@ app.use(cors({
 }))
 //HTTP request logger
 app.use(morgan('Dev'));
-app.use('/api',routes);
+app.use('/',routes);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
